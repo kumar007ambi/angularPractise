@@ -1,0 +1,23 @@
+<p>data-binding works!</p>
+
+<!--event data passing  -->
+<!-- <input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)"> -->
+  <!-- two way data binding -->
+  <!-- <input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName"> -->
+<!--<p>{{ serverName }}</p>-->
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Add Server</button>
+<!--<p [innerText]="allowNewServer"></p>-->
+<p>{{ serverCreationStatus }}</p>
+
+<input type="text" [(ngModel)]="userName">
+<p>{{userName}}</p>
+<button [disabled]="userName==='' ">Submit</button>

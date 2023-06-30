@@ -1,0 +1,14 @@
+<p>derivatives works!</p>
+
+<!-- <button class="btn btn-primary" (click)="secretPassword=!secretPassword" >Display Details</button> -->
+<button class="btn btn-primary" (click)="onToggleDetails()">
+  Display Details
+</button>
+<p *ngIf="secretPassword">Secret Password=Tuna</p>
+<div
+  *ngFor="let logItem of log;let i = index"
+  [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'transparent' }"
+  [ngClass]="{'white-text': i >= 4}"
+>
+  {{ logItem }}
+</div>
